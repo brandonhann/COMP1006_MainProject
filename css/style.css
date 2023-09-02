@@ -1,0 +1,152 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+
+* {
+    font-family: 'Poppins', sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.montserrat {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.bg {
+    background-image: url('../img/bg.svg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.bg2 {
+    background-image: url('../img/bg2.svg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.bg3 {
+    background-image: url('../img/bg3.svg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.showcase {
+    width: 800px;
+    height: auto;
+}
+
+.banner {
+    position: relative;
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+    margin-bottom: 20px;
+    margin-top: 72px;
+}
+
+.banner-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: bottom;
+    transition: opacity 1s, transform 1s;
+    transform: translateX(0);
+    opacity: 0;
+}
+
+.banner-image:first-child {
+    opacity: 1;
+}
+
+.banner-previous,
+.banner-next {
+    position: absolute;
+    top: calc(50% - 225px);
+    background-color: rgba(255, 255, 255, 0.7);
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.nav-item-green {
+    position: relative;
+    transition: all .3s ease;
+}
+
+.nav-item-green::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 1px;
+    /* text-green-700 */
+    background: #38a169;
+    bottom: 0;
+    left: 0;
+    transition: width .3s ease;
+}
+
+.nav-item-green:hover::after {
+    width: 100%;
+}
+
+.nav-item-green:hover {
+    transform: scale(1.1);
+}
+
+.nav-item-red {
+    position: relative;
+    transition: all .3s ease;
+}
+
+.nav-item-red::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 1px;
+    /* text-red-700 */
+    background: #b91c1c;
+    bottom: 0;
+    left: 0;
+    transition: width .3s ease;
+}
+
+.nav-item-red:hover::after {
+    width: 100%;
+}
+
+.nav-item-red:hover {
+    transform: scale(1.1);
+}
+
+.gsocial {
+    background-clip: text;
+    -webkit-background-clip: text;
+    transition: background 3s;
+}
+
+a:hover .gsocial {
+    background: linear-gradient(to right, transparent, #0f766e, #1d4ed8, #15803d, transparent);
+    background-clip: text;
+    -webkit-background-clip: text;
+    background-size: 200% auto;
+    -webkit-text-fill-color: transparent;
+    animation: Gradient 4.5s ease infinite;
+}
+
+@keyframes Gradient {
+    0% {
+        background-position: -50%;
+    }
+
+    100% {
+        background-position: 150% 0;
+    }
+}
